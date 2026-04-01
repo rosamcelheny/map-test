@@ -20,11 +20,34 @@
   .popup-title { font-weight: 600; font-size: 0.95rem; color: #111; margin-bottom: 3px; }
   .popup-desc { font-size: 0.82rem; color: #666; }
 
+  #color-control {
+    position: absolute; top: 16px; left: 16px;
+    background: white; border-radius: 8px; padding: 10px 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12); z-index: 10;
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  #color-control label { font-size: 0.8rem; color: #555; }
+  #color-control input {
+    width: 90px; padding: 4px 8px; border: 1px solid #e0e0e0;
+    border-radius: 4px; font-size: 0.82rem; font-family: "indivisible", sans-serif; outline: none;
+  }
+  #color-control input:focus { border-color: #aaa; }
+
 </style>
 </head>
 <body>
 <div id="map-wrapper">
   <div id="map"></div>
+  <div id="color-control">
+    <label>Land color</label>
+    <input type="text" id="hex-input" value="#B89D4F" maxlength="7" />
+    <label>Water color</label>
+    <input type="text" id="hex-water" value="#BCCCEB" maxlength="7" />
+    <label>Road color</label>
+    <input type="text" id="hex-road" value="#C1AE62" maxlength="7" />
+    <label>Dot color</label>
+    <input type="text" id="hex-dot" value="#FBB116" maxlength="7" />
+  </div>
 </div>
 
 <script>
@@ -147,6 +170,14 @@ async function init() {
   ];
 
   map.on('load', async () => {
+    applyLandColor('#B89D4F');
+    map.setPaintProperty('water', 'fill-color', '#BCCCEB');
+    map.getStyle().layers.forEach(l => {
+      if (l.type === 'line') {
+        try { map.setPaintProperty(l.id, 'line-color', '#C1AE62'); } catch(e) {}
+      }
+    });
+
     map.getStyle().layers.forEach(layer => {
       if (layer.type === 'symbol' && layer.layout?.['text-field']) {
         map.setLayoutProperty(layer.id, 'visibility', 'none');
@@ -174,10 +205,53 @@ async function init() {
       id: 'venues',
       type: 'circle',
       source: 'venues',
-      paint: { 'circle-radius': 4, 'circle-color': '#000000' }
+      paint: { 'circle-radius': 4, 'circle-color': '#FBB116', 'circle-stroke-width': 1, 'circle-stroke-color': 'rgba(0,0,0,0.4)' }
     });
   });
 }
+
+function applyLandColor(hex) {
+  map.getStyle().layers.forEach(l => {
+    try {
+      if (l.type === 'fill' && l.id !== 'water') {
+        map.setPaintProperty(l.id, 'fill-color', hex);
+      }
+      if (l.type === 'background') {
+        map.setPaintProperty(l.id, 'background-color', hex);
+      }
+    } catch(e) {}
+  });
+}
+
+document.getElementById('hex-input').addEventListener('input', e => {
+  const hex = e.target.value.trim();
+  if (/^#[0-9a-fA-F]{6}$/.test(hex)) applyLandColor(hex);
+});
+
+document.getElementById('hex-dot').addEventListener('input', e => {
+  const hex = e.target.value.trim();
+  if (/^#[0-9a-fA-F]{6}$/.test(hex)) {
+    try { map.setPaintProperty('venues', 'circle-color', hex); } catch(e) {}
+  }
+});
+
+document.getElementById('hex-road').addEventListener('input', e => {
+  const hex = e.target.value.trim();
+  if (/^#[0-9a-fA-F]{6}$/.test(hex)) {
+    map.getStyle().layers.forEach(l => {
+      if (l.type === 'line') {
+        try { map.setPaintProperty(l.id, 'line-color', hex); } catch(e) {}
+      }
+    });
+  }
+});
+
+document.getElementById('hex-water').addEventListener('input', e => {
+  const hex = e.target.value.trim();
+  if (/^#[0-9a-fA-F]{6}$/.test(hex)) {
+    try { map.setPaintProperty('water', 'fill-color', hex); } catch(e) {}
+  }
+});
 
 init();
 </script>
