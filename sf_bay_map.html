@@ -48,7 +48,7 @@
     <label>Dot color</label>
     <input type="text" id="hex-dot" value="#FBB116" maxlength="7" />
     <label>Pattern scale</label>
-    <input type="number" id="pixel-ratio" value="20" min="1" step="1" />
+    <input type="number" id="pixel-ratio" value="88" min="1" step="1" />
     <label style="display:flex; align-items:center; gap:6px; cursor:pointer;">
       <input type="checkbox" id="toggle-labels" checked /> Show labels
     </label>
@@ -186,7 +186,7 @@ async function init() {
       map.loadImage('Pattern_water.png', (err, img) => {
         if (err) { reject(err); return; }
         waterImg = img;
-        map.addImage('pattern-water', img, { pixelRatio: 20 });
+        map.addImage('pattern-water', img, { pixelRatio: 88 });
 
         const styleLayers = map.getStyle().layers;
         const waterIndex = styleLayers.findIndex(l => l.id === 'water');
@@ -209,7 +209,7 @@ async function init() {
       map.loadImage('Pattern_land.png', (err, img) => {
         if (err) { reject(err); return; }
         landImg = img;
-        map.addImage('pattern-land', img, { pixelRatio: 20 });
+        map.addImage('pattern-land', img, { pixelRatio: 88 });
 
         map.addSource('country-boundaries', {
           type: 'vector',
