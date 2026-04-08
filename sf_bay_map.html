@@ -40,7 +40,7 @@
   <div id="map"></div>
   <div id="color-control">
     <label>Land color</label>
-    <input type="text" id="hex-input" value="#B89D4F" maxlength="7" />
+    <input type="text" id="hex-input" value="#916D00" maxlength="7" />
     <label>Water color</label>
     <input type="text" id="hex-water" value="#BCCCEB" maxlength="7" />
     <label>Road color</label>
@@ -49,6 +49,9 @@
     <input type="text" id="hex-dot" value="#FBB116" maxlength="7" />
     <label>Pattern scale</label>
     <input type="number" id="pixel-ratio" value="88" min="1" step="1" />
+    <label style="display:flex; align-items:center; gap:6px; cursor:pointer;">
+      <input type="checkbox" id="toggle-land-pattern" checked /> Show land pattern
+    </label>
     <label style="display:flex; align-items:center; gap:6px; cursor:pointer;">
       <input type="checkbox" id="toggle-labels" checked /> Show labels
     </label>
@@ -226,7 +229,7 @@ async function init() {
           type: 'fill',
           source: 'country-boundaries',
           'source-layer': 'country_boundaries',
-          paint: { 'fill-color': '#B89D4F' }
+          paint: { 'fill-color': '#916D00' }
         }, firstRoadLayer?.id);
 
         map.addLayer({
@@ -245,7 +248,7 @@ async function init() {
       map.setLayoutProperty(id, 'visibility', 'none');
     });
 
-    applyLandColor('#B89D4F');
+    applyLandColor('#916D00');
     applyLabelStyle({ color: '#333333', halo: 'rgba(255,255,255,0.3)' });
     map.getStyle().layers.forEach(l => {
       if (l.type === 'symbol' && l.layout?.['text-field']) {
@@ -318,6 +321,10 @@ document.getElementById('pixel-ratio').addEventListener('input', e => {
   if (map.hasImage('pattern-water')) map.removeImage('pattern-water');
   if (landImg) map.addImage('pattern-land', landImg, { pixelRatio: ratio });
   if (waterImg) map.addImage('pattern-water', waterImg, { pixelRatio: ratio });
+});
+
+document.getElementById('toggle-land-pattern').addEventListener('change', e => {
+  map.setLayoutProperty('country-pattern', 'visibility', e.target.checked ? 'visible' : 'none');
 });
 
 document.getElementById('toggle-labels').addEventListener('change', e => {
