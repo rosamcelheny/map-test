@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SF Bay Area Map</title>
 <link rel="stylesheet" href="https://use.typekit.net/gek7uke.css">
+<script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: "indivisible", sans-serif; background: #f5f5f3; }
@@ -49,6 +50,9 @@
     <input type="text" id="hex-dot" value="#FBB116" maxlength="7" />
     <label>Pattern scale</label>
     <input type="number" id="pixel-ratio" value="88" min="1" step="1" />
+    <label style="display:flex; align-items:center; gap:6px; cursor:pointer;">
+      <input type="checkbox" id="toggle-roads" checked /> Show roads
+    </label>
     <label style="display:flex; align-items:center; gap:6px; cursor:pointer;">
       <input type="checkbox" id="toggle-land-pattern" checked /> Show land pattern
     </label>
@@ -286,6 +290,19 @@ async function init() {
       source: 'venues',
       paint: { 'circle-radius': 4, 'circle-color': '#FBB116', 'circle-stroke-width': 1, 'circle-stroke-color': 'rgba(0,0,0,0.4)' }
     });
+
+    // Census cartographic boundary (500k, coastline-clipped) for CA counties
+    const cbRes = await fetch('https://www2.census.gov/geo/tiger/GENZ2022/json/cb_2022_06_county_500k.json');
+    const cbData = await cbRes.json();
+    const targetFIPS = ['06041', '06097', '06055', '06075'];
+    const features = cbData.features.filter(f => targetFIPS.includes(f.properties.GEOID));
+    map.addSource('counties', { type: 'geojson', data: { type: 'FeatureCollection', features } });
+    map.addLayer({
+      id: 'county-boundaries',
+      type: 'line',
+      source: 'counties',
+      paint: { 'line-color': '#000000', 'line-width': 1.5 }
+    });
   });
 }
 
@@ -321,6 +338,15 @@ document.getElementById('pixel-ratio').addEventListener('input', e => {
   if (map.hasImage('pattern-water')) map.removeImage('pattern-water');
   if (landImg) map.addImage('pattern-land', landImg, { pixelRatio: ratio });
   if (waterImg) map.addImage('pattern-water', waterImg, { pixelRatio: ratio });
+});
+
+document.getElementById('toggle-roads').addEventListener('change', e => {
+  const visibility = e.target.checked ? 'visible' : 'none';
+  map.getStyle().layers.forEach(l => {
+    if (l.type === 'line' && l.id !== 'county-boundaries') {
+      map.setLayoutProperty(l.id, 'visibility', visibility);
+    }
+  });
 });
 
 document.getElementById('toggle-land-pattern').addEventListener('change', e => {
