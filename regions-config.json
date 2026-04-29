@@ -1,0 +1,64 @@
+{
+  "regions": [
+    {
+      "name": "Castro, Mission",
+      "type": "sf-neighborhoods",
+      "components": ["Castro/Upper Market", "Mission"]
+    },
+    {
+      "name": "Civic Center, NoPa, SOMA, Tenderloin",
+      "type": "sf-neighborhoods",
+      "components": ["Civic Center", "Western Addition", "South of Market", "Tenderloin"]
+    },
+    {
+      "name": "Chinatown, Downtown, Embarcadero",
+      "type": "sf-neighborhoods",
+      "components": ["Chinatown", "Financial District/South Beach", "North Beach"]
+    },
+    {
+      "name": "Dogpatch, Potrero Hill",
+      "type": "sf-neighborhoods",
+      "components": ["Potrero Hill"]
+    },
+    {
+      "name": "Fort Mason, Golden Gate Park, Nob Hill",
+      "type": "sf-neighborhoods",
+      "components": ["Marina", "Golden Gate Park", "Nob Hill"]
+    },
+    {
+      "name": "Parkmerced",
+      "type": "sf-neighborhoods",
+      "components": ["Lakeshore"]
+    },
+    {
+      "name": "Marin, Napa, Sonoma",
+      "type": "counties",
+      "fips": ["06041", "06055", "06097"]
+    },
+    {
+      "name": "San Jose, Santa Clara, Santa Cruz",
+      "type": "counties",
+      "fips": ["06085", "06087"]
+    },
+    {
+      "name": "Peninsula",
+      "type": "counties",
+      "fips": ["06081"]
+    },
+    {
+      "name": "Davis, Sacramento",
+      "type": "cities",
+      "components": ["Davis", "Sacramento"]
+    },
+    {
+      "name": "Berkeley, Richmond",
+      "type": "cities",
+      "components": ["Berkeley", "Richmond"]
+    },
+    {
+      "name": "Oakland",
+      "type": "cities",
+      "components": ["Oakland"]
+    }
+  ]
+}
