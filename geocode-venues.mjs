@@ -1,0 +1,121 @@
+import { writeFileSync } from 'fs';
+
+const TOKEN = 'pk.eyJ1Ijoicm1jZWxoZW55IiwiYSI6ImNrZDRpenltczExMjcycW11Z3AzaHE3cmsifQ.r4jOEJ5o1M3P1jSzu1GniA';
+
+const venues = [
+  { name: 'Artspan', address: '934 Brannan St, San Francisco, CA 94103' },
+  { name: 'Asian Art Museum', address: '200 Larkin St, San Francisco, CA 94102' },
+  { name: 'Goethe-Institut San Francisco', address: '657 Howard St, San Francisco, CA 94105' },
+  { name: 'Hospitality House', address: '181 6th St, San Francisco, CA 94103' },
+  { name: 'Museum of the African Diaspora', address: '685 Mission St, San Francisco, CA 94105' },
+  { name: 'Root Division', address: '1131 Mission St, San Francisco, CA 94103' },
+  { name: "Saint Joseph's Arts Society", address: '1401 Howard St, San Francisco, CA 94103' },
+  { name: 'San Francisco Arts Commission Galleries', address: '401 Van Ness Ave Suite 126, San Francisco, CA 94102' },
+  { name: 'San Francisco Museum of Modern Art', address: '151 3rd St, San Francisco, CA 94103' },
+  { name: 'San Francisco Public Library Exhibitions', address: '100 Larkin St, San Francisco, CA 94102' },
+  { name: 'SFAI Legacy Foundation + Archive', address: '20 Hawthorne St, San Francisco, CA 94102' },
+  { name: 'Thacher Gallery at the University of San Francisco', address: '2130 Fulton St, San Francisco, CA 94117' },
+  { name: 'The Contemporary Jewish Museum', address: '736 Mission St, San Francisco, CA 94103' },
+  { name: 'The Tenderloin Museum', address: '398 Eddy St, San Francisco, CA 94102' },
+  { name: 'Yerba Buena Center for the Arts', address: '701 Mission St, San Francisco, CA 94103' },
+  { name: 'Bob Mizer Museum and Photographic Archives', address: '920 Larkin Street, San Francisco, CA 94109' },
+  { name: 'Chinese Culture Center', address: '750 Kearny St 3rd Floor, San Francisco, CA 94108' },
+  { name: 'Exploratorium', address: 'Pier 15 Embarcadero at Green St, San Francisco, CA 94111' },
+  { name: 'Arion Press', address: '2 Marina Blvd Suite 100, San Francisco, CA 94123' },
+  { name: 'Fine Arts Museums of San Francisco', address: '50 Hagiwara Tea Garden Dr, San Francisco, CA 94118' },
+  { name: 'FOR-SITE', address: '557 Ashbury St, San Francisco, CA 94117' },
+  { name: 'Fort Mason Center for Arts & Culture', address: '2 Marina Blvd, San Francisco, CA 94123' },
+  { name: 'Grace Cathedral', address: '1100 California St, San Francisco, CA 94108' },
+  { name: 'Haight Street Art Center', address: '215 Haight St, San Francisco, CA 94102' },
+  { name: 'SF Camerawork', address: '2 Marina Blvd Building A, San Francisco, CA 94123' },
+  { name: 'CCA Wattis Institute for Contemporary Arts', address: '145 Hooper St, San Francisco, CA 94107' },
+  { name: 'Minnesota Street Project Foundation', address: '1275 Minnesota St, San Francisco, CA 94107' },
+  { name: 'Museum of Craft and Design', address: '2569 3rd St, San Francisco, CA 94107' },
+  { name: 'Recology Artist in Residence Program (AIR)', address: '401 Tunnel Ave, San Francisco, CA 94134' },
+  { name: 'San Francisco Center for the Book', address: '375 Rhode Island St, San Francisco, CA 94103' },
+  { name: 'Slash', address: '1150 25th St Building B, San Francisco, CA 94107' },
+  { name: 'Tamalpa Institute Center for the Halprin Work', address: '1275 Minnesota St, San Francisco, CA 94107' },
+  { name: 'The San Francisco Arts Education Project', address: '1275 Minnesota Street, San Francisco, CA 94107' },
+  { name: '500 Capp Street', address: '500 Capp St, San Francisco, CA 94110' },
+  { name: 'Creativity Explored', address: '3245 16th St, San Francisco, CA 94103' },
+  { name: 'Cushion Works', address: '3320 18th St, San Francisco, CA 94110' },
+  { name: 'GLBT Historical Society', address: '4127 18th St, San Francisco, CA 94114' },
+  { name: 'Gray Area Foundation for the Arts', address: '2665 Mission St, San Francisco, CA 94110' },
+  { name: 'Precita Eyes', address: '2981 24th St, San Francisco, CA 94110' },
+  { name: 'Southern Exposure', address: '3030 20th St, San Francisco, CA 94110' },
+  { name: 'The Lab', address: '2948 16th St, San Francisco, CA 94103' },
+  { name: 'Fine Arts Gallery, San Francisco State University', address: '1600 Holloway Ave, San Francisco, CA 94132' },
+  { name: 'Black Panther Party Museum', address: '1427 Broadway, Oakland, CA 94612' },
+  { name: 'Creative Growth', address: '355 24th St, Oakland, CA 94612' },
+  { name: 'Mills College Art Museum at Northeastern University', address: '5000 MacArthur Blvd, Oakland, CA 94613' },
+  { name: 'Oakland Museum of California', address: '1000 Oak St, Oakland, CA 94607' },
+  { name: 'Berkeley Art Center', address: '1275 Walnut St, Berkeley, CA 94709' },
+  { name: 'Berkeley Art Museum & Pacific Film Archive', address: '2155 Center St, Berkeley, CA 94720' },
+  { name: 'Eames Institute', address: '1330 S 51st St, Richmond, CA 94804' },
+  { name: 'Kala Art Institute', address: '2990 San Pablo Ave, Berkeley, CA 94702' },
+  { name: 'NIAD Art Center', address: '551 23rd St, Richmond, CA 94804' },
+  { name: 'de Saisset Museum at Santa Clara University', address: '500 El Camino Real, Santa Clara, CA 95050' },
+  { name: 'Indexical', address: '1050 River St #119, Santa Cruz, CA 95060' },
+  { name: 'Institute of Contemporary Art San José', address: '560 S 1st St, San Jose, CA 95113' },
+  { name: 'San José Museum of Art', address: '110 S Market St, San Jose, CA 95113' },
+  { name: 'San José Museum of Quilts & Textiles', address: '520 S 1st St, San Jose, CA 95113' },
+  { name: 'Santa Cruz Barrios Unidos', address: '1817 Soquel Ave, Santa Cruz, CA 95062' },
+  { name: 'Santa Cruz Museum of Art & History', address: '705 Front St, Santa Cruz, CA 95060' },
+  { name: 'Visualizing Abolition at UCSC Institute of the Arts & Sciences', address: '100 Panetta Ave, Santa Cruz, CA 95060' },
+  { name: 'Montalvo Arts Center', address: '15400 Montalvo Rd, Saratoga, CA 95070' },
+  { name: 'Bolinas Museum', address: '48 Wharf Rd, Bolinas, CA 94924' },
+  { name: 'di Rosa Center for Contemporary Art', address: '5200 Sonoma Hwy, Napa, CA 94559' },
+  { name: 'Headlands Center for the Arts', address: '944 Simmonds Rd, Sausalito, CA 94965' },
+  { name: 'JB Blunk Estate', address: '11101 CA-1 #105, Point Reyes Station, CA 94956' },
+  { name: 'Marin Museum of Contemporary Art', address: '1210 Fifth Ave, San Rafael, CA 94901' },
+  { name: 'Sonoma Valley Museum of Art', address: '551 Broadway, Sonoma, CA 95476' },
+  { name: 'Petaluma Arts Center', address: '230 Lakeville St, Petaluma, CA 94952' },
+  { name: 'Works in Progress', address: '3501 Civic Center Dr, San Rafael, CA 94903' },
+  { name: 'Marin County Civic Center', address: '3501 Civic Center Dr, San Rafael, CA 94903' },
+  { name: 'Blue Line Arts', address: '405 Vernon St #100, Roseville, CA 95678' },
+  { name: 'Crocker Art Museum', address: '216 O St, Sacramento, CA 95814' },
+  { name: 'Manetti Shrem Museum', address: '254 Old Davis Rd, Davis, CA 95616' },
+  { name: 'Sacramento State University Galleries', address: '6000 Jed Smith Dr, Sacramento, CA 95819' },
+  { name: 'The Pence Gallery', address: '212 D St, Davis, CA 95616' },
+  { name: 'Verge Center for the Arts', address: '625 S St, Sacramento, CA 95811' },
+  { name: 'Cantor Arts Center at Stanford University', address: '328 Lomita Dr, Stanford, CA 94305' },
+  { name: 'Djerassi Resident Artists Program', address: '2325 Bear Gulch Rd, Woodside, CA 94062' },
+  { name: 'Palo Alto Art Center', address: '1313 Newell Rd, Palo Alto, CA 94303' },
+  { name: 'The Anderson Collection at Stanford University', address: '314 Lomita Dr, Stanford, CA 94305' },
+  { name: 'The Foster Museum', address: '940 Commercial St, Palo Alto, CA 94303' },
+  { name: 'EPACENTER', address: '1950 Bay Rd, East Palo Alto, CA 94303' },
+  { name: 'SFO Museum', address: 'San Francisco International Airport, San Francisco, CA 94128' },
+];
+
+console.log(`Geocoding ${venues.length} venues...`);
+
+const features = [];
+const failed = [];
+
+for (const v of venues) {
+  try {
+    const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(v.address)}.json?access_token=${TOKEN}&limit=1`;
+    const res = await fetch(url);
+    const data = await res.json();
+    if (data.features && data.features.length > 0) {
+      features.push({
+        type: 'Feature',
+        geometry: data.features[0].geometry,
+        properties: { name: v.name, address: v.address }
+      });
+      console.log(`  ✓ ${v.name}`);
+    } else {
+      failed.push(v.name);
+      console.warn(`  ✗ ${v.name} — no results`);
+    }
+  } catch (e) {
+    failed.push(v.name);
+    console.error(`  ✗ ${v.name} — ${e.message}`);
+  }
+}
+
+const geojson = { type: 'FeatureCollection', features };
+writeFileSync('venues.geojson', JSON.stringify(geojson, null, 2));
+
+console.log(`\nWrote venues.geojson with ${features.length} features.`);
+if (failed.length) console.warn(`Failed to geocode: ${failed.join(', ')}`);

@@ -1,0 +1,1155 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.406456,
+          37.771098
+        ]
+      },
+      "properties": {
+        "name": "Artspan",
+        "address": "934 Brannan St, San Francisco, CA 94103"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.416125,
+          37.780193
+        ]
+      },
+      "properties": {
+        "name": "Asian Art Museum",
+        "address": "200 Larkin St, San Francisco, CA 94102"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.399408,
+          37.785561
+        ]
+      },
+      "properties": {
+        "name": "Goethe-Institut San Francisco",
+        "address": "657 Howard St, San Francisco, CA 94105"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.407362,
+          37.780209
+        ]
+      },
+      "properties": {
+        "name": "Hospitality House",
+        "address": "181 6th St, San Francisco, CA 94103"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.401472,
+          37.786468
+        ]
+      },
+      "properties": {
+        "name": "Museum of the African Diaspora",
+        "address": "685 Mission St, San Francisco, CA 94105"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.411447,
+          37.778438
+        ]
+      },
+      "properties": {
+        "name": "Root Division",
+        "address": "1131 Mission St, San Francisco, CA 94103"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.414351,
+          37.773626
+        ]
+      },
+      "properties": {
+        "name": "Saint Joseph's Arts Society",
+        "address": "1401 Howard St, San Francisco, CA 94103"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.420737,
+          37.779627
+        ]
+      },
+      "properties": {
+        "name": "San Francisco Arts Commission Galleries",
+        "address": "401 Van Ness Ave Suite 126, San Francisco, CA 94102"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.400979,
+          37.785803
+        ]
+      },
+      "properties": {
+        "name": "San Francisco Museum of Modern Art",
+        "address": "151 3rd St, San Francisco, CA 94103"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.415932,
+          37.779183
+        ]
+      },
+      "properties": {
+        "name": "San Francisco Public Library Exhibitions",
+        "address": "100 Larkin St, San Francisco, CA 94102"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.399181,
+          37.785496
+        ]
+      },
+      "properties": {
+        "name": "SFAI Legacy Foundation + Archive",
+        "address": "20 Hawthorne St, San Francisco, CA 94102"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.450231,
+          37.776687
+        ]
+      },
+      "properties": {
+        "name": "Thacher Gallery at the University of San Francisco",
+        "address": "2130 Fulton St, San Francisco, CA 94117"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.403598,
+          37.786033
+        ]
+      },
+      "properties": {
+        "name": "The Contemporary Jewish Museum",
+        "address": "736 Mission St, San Francisco, CA 94103"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.414113,
+          37.783941
+        ]
+      },
+      "properties": {
+        "name": "The Tenderloin Museum",
+        "address": "398 Eddy St, San Francisco, CA 94102"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.402093,
+          37.785623
+        ]
+      },
+      "properties": {
+        "name": "Yerba Buena Center for the Arts",
+        "address": "701 Mission St, San Francisco, CA 94103"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.417939,
+          37.786472
+        ]
+      },
+      "properties": {
+        "name": "Bob Mizer Museum and Photographic Archives",
+        "address": "920 Larkin Street, San Francisco, CA 94109"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.404388,
+          37.795181
+        ]
+      },
+      "properties": {
+        "name": "Chinese Culture Center",
+        "address": "750 Kearny St 3rd Floor, San Francisco, CA 94108"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.421773,
+          37.797884
+        ]
+      },
+      "properties": {
+        "name": "Exploratorium",
+        "address": "Pier 15 Embarcadero at Green St, San Francisco, CA 94111"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.432084,
+          37.806296
+        ]
+      },
+      "properties": {
+        "name": "Arion Press",
+        "address": "2 Marina Blvd Suite 100, San Francisco, CA 94123"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.468616,
+          37.771628
+        ]
+      },
+      "properties": {
+        "name": "Fine Arts Museums of San Francisco",
+        "address": "50 Hagiwara Tea Garden Dr, San Francisco, CA 94118"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.44718,
+          37.770119
+        ]
+      },
+      "properties": {
+        "name": "FOR-SITE",
+        "address": "557 Ashbury St, San Francisco, CA 94117"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.432084,
+          37.806296
+        ]
+      },
+      "properties": {
+        "name": "Fort Mason Center for Arts & Culture",
+        "address": "2 Marina Blvd, San Francisco, CA 94123"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.413371,
+          37.791882
+        ]
+      },
+      "properties": {
+        "name": "Grace Cathedral",
+        "address": "1100 California St, San Francisco, CA 94108"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.426071,
+          37.772549
+        ]
+      },
+      "properties": {
+        "name": "Haight Street Art Center",
+        "address": "215 Haight St, San Francisco, CA 94102"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.432084,
+          37.806296
+        ]
+      },
+      "properties": {
+        "name": "SF Camerawork",
+        "address": "2 Marina Blvd Building A, San Francisco, CA 94123"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.398785,
+          37.768022
+        ]
+      },
+      "properties": {
+        "name": "CCA Wattis Institute for Contemporary Arts",
+        "address": "145 Hooper St, San Francisco, CA 94107"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.389365,
+          37.754261
+        ]
+      },
+      "properties": {
+        "name": "Minnesota Street Project Foundation",
+        "address": "1275 Minnesota St, San Francisco, CA 94107"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.387899,
+          37.756939
+        ]
+      },
+      "properties": {
+        "name": "Museum of Craft and Design",
+        "address": "2569 3rd St, San Francisco, CA 94107"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.400537,
+          37.708885
+        ]
+      },
+      "properties": {
+        "name": "Recology Artist in Residence Program (AIR)",
+        "address": "401 Tunnel Ave, San Francisco, CA 94134"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40233,
+          37.765359
+        ]
+      },
+      "properties": {
+        "name": "San Francisco Center for the Book",
+        "address": "375 Rhode Island St, San Francisco, CA 94103"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.390257,
+          37.753082
+        ]
+      },
+      "properties": {
+        "name": "Slash",
+        "address": "1150 25th St Building B, San Francisco, CA 94107"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.389365,
+          37.754261
+        ]
+      },
+      "properties": {
+        "name": "Tamalpa Institute Center for the Halprin Work",
+        "address": "1275 Minnesota St, San Francisco, CA 94107"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.389365,
+          37.754261
+        ]
+      },
+      "properties": {
+        "name": "The San Francisco Arts Education Project",
+        "address": "1275 Minnesota Street, San Francisco, CA 94107"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.418188,
+          37.758561
+        ]
+      },
+      "properties": {
+        "name": "500 Capp Street",
+        "address": "500 Capp St, San Francisco, CA 94110"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.425012,
+          37.764469
+        ]
+      },
+      "properties": {
+        "name": "Creativity Explored",
+        "address": "3245 16th St, San Francisco, CA 94103"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.417803,
+          37.762105
+        ]
+      },
+      "properties": {
+        "name": "Cushion Works",
+        "address": "3320 18th St, San Francisco, CA 94110"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.43565,
+          37.760659
+        ]
+      },
+      "properties": {
+        "name": "GLBT Historical Society",
+        "address": "4127 18th St, San Francisco, CA 94114"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.418362,
+          37.7544
+        ]
+      },
+      "properties": {
+        "name": "Gray Area Foundation for the Arts",
+        "address": "2665 Mission St, San Francisco, CA 94110"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.411514,
+          37.752424
+        ]
+      },
+      "properties": {
+        "name": "Precita Eyes",
+        "address": "2981 24th St, San Francisco, CA 94110"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.411283,
+          37.759324
+        ]
+      },
+      "properties": {
+        "name": "Southern Exposure",
+        "address": "3030 20th St, San Francisco, CA 94110"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.418339,
+          37.765331
+        ]
+      },
+      "properties": {
+        "name": "The Lab",
+        "address": "2948 16th St, San Francisco, CA 94103"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.476593,
+          37.721183
+        ]
+      },
+      "properties": {
+        "name": "Fine Arts Gallery, San Francisco State University",
+        "address": "1600 Holloway Ave, San Francisco, CA 94132"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.271111,
+          37.804824
+        ]
+      },
+      "properties": {
+        "name": "Black Panther Party Museum",
+        "address": "1427 Broadway, Oakland, CA 94612"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.264183,
+          37.812965
+        ]
+      },
+      "properties": {
+        "name": "Creative Growth",
+        "address": "355 24th St, Oakland, CA 94612"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.181815,
+          37.783088
+        ]
+      },
+      "properties": {
+        "name": "Mills College Art Museum at Northeastern University",
+        "address": "5000 MacArthur Blvd, Oakland, CA 94613"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.263289,
+          37.798747
+        ]
+      },
+      "properties": {
+        "name": "Oakland Museum of California",
+        "address": "1000 Oak St, Oakland, CA 94607"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.268488,
+          37.884391
+        ]
+      },
+      "properties": {
+        "name": "Berkeley Art Center",
+        "address": "1275 Walnut St, Berkeley, CA 94709"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.26641,
+          37.87075
+        ]
+      },
+      "properties": {
+        "name": "Berkeley Art Museum & Pacific Film Archive",
+        "address": "2155 Center St, Berkeley, CA 94720"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.325861,
+          37.913623
+        ]
+      },
+      "properties": {
+        "name": "Eames Institute",
+        "address": "1330 S 51st St, Richmond, CA 94804"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.286492,
+          37.852653
+        ]
+      },
+      "properties": {
+        "name": "Kala Art Institute",
+        "address": "2990 San Pablo Ave, Berkeley, CA 94702"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.347848,
+          37.939381
+        ]
+      },
+      "properties": {
+        "name": "NIAD Art Center",
+        "address": "551 23rd St, Richmond, CA 94804"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.933082,
+          37.349673
+        ],
+        "interpolated": true,
+        "omitted": true
+      },
+      "properties": {
+        "name": "de Saisset Museum at Santa Clara University",
+        "address": "500 El Camino Real, Santa Clara, CA 95050"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.030011,
+          36.987673
+        ]
+      },
+      "properties": {
+        "name": "Indexical",
+        "address": "1050 River St #119, Santa Cruz, CA 95060"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.883954,
+          37.327844
+        ]
+      },
+      "properties": {
+        "name": "Institute of Contemporary Art San José",
+        "address": "560 S 1st St, San Jose, CA 95113"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.890206,
+          37.333549
+        ]
+      },
+      "properties": {
+        "name": "San José Museum of Art",
+        "address": "110 S Market St, San Jose, CA 95113"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.884252,
+          37.328239
+        ]
+      },
+      "properties": {
+        "name": "San José Museum of Quilts & Textiles",
+        "address": "520 S 1st St, San Jose, CA 95113"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.001125,
+          36.981637
+        ]
+      },
+      "properties": {
+        "name": "Santa Cruz Barrios Unidos",
+        "address": "1817 Soquel Ave, Santa Cruz, CA 95062"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.025416,
+          36.974437
+        ]
+      },
+      "properties": {
+        "name": "Santa Cruz Museum of Art & History",
+        "address": "705 Front St, Santa Cruz, CA 95060"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.050468,
+          36.95577
+        ]
+      },
+      "properties": {
+        "name": "Visualizing Abolition at UCSC Institute of the Arts & Sciences",
+        "address": "100 Panetta Ave, Santa Cruz, CA 95060"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.028936,
+          37.246261
+        ]
+      },
+      "properties": {
+        "name": "Montalvo Arts Center",
+        "address": "15400 Montalvo Rd, Saratoga, CA 95070"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.684808,
+          37.910083
+        ]
+      },
+      "properties": {
+        "name": "Bolinas Museum",
+        "address": "48 Wharf Rd, Bolinas, CA 94924"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.35297,
+          38.258074
+        ]
+      },
+      "properties": {
+        "name": "di Rosa Center for Contemporary Art",
+        "address": "5200 Sonoma Hwy, Napa, CA 94559"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.522435,
+          37.829649
+        ]
+      },
+      "properties": {
+        "name": "Headlands Center for the Arts",
+        "address": "944 Simmonds Rd, Sausalito, CA 94965"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8046,
+          38.067124
+        ]
+      },
+      "properties": {
+        "name": "JB Blunk Estate",
+        "address": "11101 CA-1 #105, Point Reyes Station, CA 94956"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.529745,
+          37.974443
+        ]
+      },
+      "properties": {
+        "name": "Marin Museum of Contemporary Art",
+        "address": "1210 Fifth Ave, San Rafael, CA 94901"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.45841,
+          38.290966
+        ]
+      },
+      "properties": {
+        "name": "Sonoma Valley Museum of Art",
+        "address": "551 Broadway, Sonoma, CA 95476"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.634919,
+          38.237182
+        ]
+      },
+      "properties": {
+        "name": "Petaluma Arts Center",
+        "address": "230 Lakeville St, Petaluma, CA 94952"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.530815,
+          37.998247
+        ]
+      },
+      "properties": {
+        "name": "Works in Progress",
+        "address": "3501 Civic Center Dr, San Rafael, CA 94903"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.530815,
+          37.998247
+        ]
+      },
+      "properties": {
+        "name": "Marin County Civic Center",
+        "address": "3501 Civic Center Dr, San Rafael, CA 94903"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.285478,
+          38.74743
+        ]
+      },
+      "properties": {
+        "name": "Blue Line Arts",
+        "address": "405 Vernon St #100, Roseville, CA 95678"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.505965,
+          38.577099
+        ]
+      },
+      "properties": {
+        "name": "Crocker Art Museum",
+        "address": "216 O St, Sacramento, CA 95814"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.747781,
+          38.533437
+        ]
+      },
+      "properties": {
+        "name": "Manetti Shrem Museum",
+        "address": "254 Old Davis Rd, Davis, CA 95616"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.423777,
+          38.563426
+        ]
+      },
+      "properties": {
+        "name": "Sacramento State University Galleries",
+        "address": "6000 Jed Smith Dr, Sacramento, CA 95819"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.74201,
+          38.543551
+        ]
+      },
+      "properties": {
+        "name": "The Pence Gallery",
+        "address": "212 D St, Davis, CA 95616"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.502107,
+          38.571793
+        ]
+      },
+      "properties": {
+        "name": "Verge Center for the Arts",
+        "address": "625 S St, Sacramento, CA 95811"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.170778,
+          37.432997
+        ]
+      },
+      "properties": {
+        "name": "Cantor Arts Center at Stanford University",
+        "address": "328 Lomita Dr, Stanford, CA 94305"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.298971,
+          37.36553
+        ]
+      },
+      "properties": {
+        "name": "Djerassi Resident Artists Program",
+        "address": "2325 Bear Gulch Rd, Woodside, CA 94062"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.138996,
+          37.443981
+        ]
+      },
+      "properties": {
+        "name": "Palo Alto Art Center",
+        "address": "1313 Newell Rd, Palo Alto, CA 94303"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.170856,
+          37.433755
+        ]
+      },
+      "properties": {
+        "name": "The Anderson Collection at Stanford University",
+        "address": "314 Lomita Dr, Stanford, CA 94305"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.099756,
+          37.423587
+        ]
+      },
+      "properties": {
+        "name": "The Foster Museum",
+        "address": "940 Commercial St, Palo Alto, CA 94303"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.131078,
+          37.472783
+        ]
+      },
+      "properties": {
+        "name": "EPACENTER",
+        "address": "1950 Bay Rd, East Palo Alto, CA 94303"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.389325,
+          37.615685
+        ]
+      },
+      "properties": {
+        "name": "SFO Museum",
+        "address": "San Francisco International Airport, San Francisco, CA 94128"
+      }
+    }
+  ]
+}
