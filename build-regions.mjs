@@ -2,9 +2,9 @@ import { readFileSync, writeFileSync } from 'fs';
 import * as turf from '@turf/turf';
 
 const config = JSON.parse(readFileSync('regions-config.json', 'utf8'));
-const sfNeighborhoods = JSON.parse(readFileSync('Analysis_Neighborhoods_20260429.geojson', 'utf8'));
-const caCounties = JSON.parse(readFileSync('counties.geojson', 'utf8'));
-const caPlaces = JSON.parse(readFileSync('places.geojson', 'utf8'));
+const sfNeighborhoods = JSON.parse(readFileSync('map-data/Analysis_Neighborhoods_20260429.geojson', 'utf8'));
+const caCounties = JSON.parse(readFileSync('map-data/counties.geojson', 'utf8'));
+const caPlaces = JSON.parse(readFileSync('map-data/places.geojson', 'utf8'));
 
 function unionFeatures(features, regionName) {
   if (features.length === 0) return null;
