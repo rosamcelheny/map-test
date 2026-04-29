@@ -104,9 +104,13 @@ async function init() {
   await loadScript('https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js');
 
   mapboxgl.accessToken = TOKEN;
+  const styleRes = await fetch(`https://api.mapbox.com/styles/v1/mapbox/light-v11?access_token=${TOKEN}`);
+  const styleJson = await styleRes.json();
+  styleJson.glyphs = 'mapbox://fonts/rmcelheny/{fontstack}/{range}.pbf';
+
   map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/light-v11',
+    style: styleJson,
     center: [-122.2, 37.65],
     zoom: 8.8,
     minZoom: 7,
@@ -114,6 +118,7 @@ async function init() {
   });
 
   map.addControl(new mapboxgl.NavigationControl(), 'bottom-left');
+  map.on('zoom', () => console.log('zoom:', map.getZoom().toFixed(2)));
 
   map.on('load', async () => {
     await new Promise((resolve, reject) => {
@@ -183,7 +188,7 @@ async function init() {
     applyLabelStyle({ color: '#333333', halo: 'rgba(255,255,255,0.3)' });
     map.getStyle().layers.forEach(l => {
       if (l.type === 'symbol' && l.layout?.['text-field']) {
-        try { map.setLayoutProperty(l.id, 'text-font', ['Arial Unicode MS Regular']); } catch(e) {}
+        try { map.setLayoutProperty(l.id, 'text-font', ['Indivisible Medium', 'Arial Unicode MS Regular']); } catch(e) {}
       }
     });
     map.setPaintProperty('water', 'fill-color', '#BCCCEB');
