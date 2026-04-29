@@ -41,11 +41,11 @@
   <div id="map"></div>
   <div id="color-control">
     <label>Land color</label>
-    <input type="text" id="hex-input" value="#916D00" maxlength="7" />
+    <input type="text" id="hex-input" value="#3e3700" maxlength="7" />
     <label>Water color</label>
-    <input type="text" id="hex-water" value="#BCCCEB" maxlength="7" />
+    <input type="text" id="hex-water" value="#96abd4" maxlength="7" />
     <label>Road color</label>
-    <input type="text" id="hex-road" value="#C1AE62" maxlength="7" />
+    <input type="text" id="hex-road" value="#614900" maxlength="7" />
     <label>Dot color</label>
     <input type="text" id="hex-dot" value="#FBB116" maxlength="7" />
     <label>Dot size</label>
@@ -61,7 +61,7 @@
     <label>Water pattern</label>
     <input type="file" id="upload-water-pattern" accept="image/png,image/jpeg" />
     <label>Pattern scale</label>
-    <input type="number" id="pixel-ratio" value="88" min="1" step="1" />
+    <input type="number" id="pixel-ratio" value="125" min="1" step="1" />
     <label style="display:flex; align-items:center; gap:6px; cursor:pointer;">
       <input type="checkbox" id="toggle-roads" checked /> Show roads
     </label>
@@ -72,11 +72,11 @@
       <input type="checkbox" id="toggle-labels" checked /> Show labels
     </label>
     <label>Building color</label>
-    <input type="text" id="hex-building" value="#C1AE62" maxlength="7" />
+    <input type="text" id="hex-building" value="#614900" maxlength="7" />
     <label>Label color</label>
-    <input type="text" id="hex-label" value="#333333" maxlength="7" />
+    <input type="text" id="hex-label" value="#B89D4F" maxlength="7" />
     <label>Label halo</label>
-    <input type="text" id="hex-label-halo" value="rgba(255,255,255,0.3)" maxlength="30" />
+    <input type="text" id="hex-label-halo" value="rgba(0,0,0,0.3)" maxlength="30" />
   </div>
 </div>
 
@@ -125,7 +125,7 @@ async function init() {
       map.loadImage('Pattern_water.png', (err, img) => {
         if (err) { reject(err); return; }
         waterImg = img;
-        map.addImage('pattern-water', img, { pixelRatio: 88 });
+        map.addImage('pattern-water', img, { pixelRatio: 125 });
 
         const styleLayers = map.getStyle().layers;
         const waterIndex = styleLayers.findIndex(l => l.id === 'water');
@@ -148,7 +148,7 @@ async function init() {
       map.loadImage('Pattern_land.png', (err, img) => {
         if (err) { reject(err); return; }
         landImg = img;
-        map.addImage('pattern-land', img, { pixelRatio: 88 });
+        map.addImage('pattern-land', img, { pixelRatio: 125 });
 
         map.addSource('country-boundaries', {
           type: 'vector',
@@ -165,7 +165,7 @@ async function init() {
           type: 'fill',
           source: 'country-boundaries',
           'source-layer': 'country_boundaries',
-          paint: { 'fill-color': '#916D00' }
+          paint: { 'fill-color': '#3e3700' }
         }, firstRoadLayer?.id);
 
         map.addLayer({
@@ -173,6 +173,7 @@ async function init() {
           type: 'fill',
           source: 'country-boundaries',
           'source-layer': 'country_boundaries',
+          maxzoom: 12,
           paint: { 'fill-pattern': 'pattern-land' }
         }, firstRoadLayer?.id);
 
@@ -189,17 +190,20 @@ async function init() {
       if (map.getLayer(id)) map.setLayerZoomRange(id, minzoom ?? 0, maxzoom ?? 24);
     });
 
-    applyLandColor('#916D00');
-    applyLabelStyle({ color: '#333333', halo: 'rgba(255,255,255,0.3)' });
+    applyLandColor('#3e3700');
+    applyLabelStyle({ color: '#B89D4F', halo: 'rgba(0,0,0,0.3)' });
     map.getStyle().layers.forEach(l => {
       if (l.type === 'symbol' && l.layout?.['text-field']) {
         try { map.setLayoutProperty(l.id, 'text-font', ['Indivisible Medium', 'Arial Unicode MS Regular']); } catch(e) {}
       }
     });
-    map.setPaintProperty('water', 'fill-color', '#BCCCEB');
+    map.setPaintProperty('water', 'fill-color', '#96abd4');
     map.getStyle().layers.forEach(l => {
       if (l.type === 'line') {
-        try { map.setPaintProperty(l.id, 'line-color', '#C1AE62'); } catch(e) {}
+        try { map.setPaintProperty(l.id, 'line-color', '#614900'); } catch(e) {}
+        if (l.id !== 'county-boundaries' && l.id !== 'regions-stroke') {
+          try { map.setLayerZoomRange(l.id, 12, l.maxzoom ?? 24); } catch(e) {}
+        }
       }
     });
 
@@ -212,14 +216,14 @@ async function init() {
       id: 'regions-fill',
       type: 'fill',
       source: 'regions',
-      paint: { 'fill-color': '#FF6B35', 'fill-opacity': 0.15 }
+      paint: { 'fill-color': '#FF6B35', 'fill-opacity': 0.05 }
     });
 
     map.addLayer({
       id: 'regions-stroke',
       type: 'line',
       source: 'regions',
-      paint: { 'line-color': '#FF6B35', 'line-width': 2 }
+      paint: { 'line-color': '#FF6B35', 'line-width': 1 }
     });
 
     const venuesRes = await fetch('venues.geojson');
