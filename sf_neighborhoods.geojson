@@ -1,0 +1,5 @@
+{
+  "code" : "invalid_request",
+  "error" : true,
+  "message" : "Parameter 'format' is required"
+}
