@@ -8,7 +8,7 @@
     {
       "name": "Civic Center, NoPa, SOMA, Tenderloin",
       "type": "sf-neighborhoods",
-      "components": ["Civic Center", "Western Addition", "South of Market", "Tenderloin"]
+      "components": ["Western Addition", "South of Market", "Tenderloin"]
     },
     {
       "name": "Chinatown, Downtown, Embarcadero",

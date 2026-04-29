@@ -193,6 +193,25 @@ async function init() {
       }
     });
 
+    const regionsRes = await fetch('regions.geojson');
+    const regionsData = await regionsRes.json();
+
+    map.addSource('regions', { type: 'geojson', data: regionsData });
+
+    map.addLayer({
+      id: 'regions-fill',
+      type: 'fill',
+      source: 'regions',
+      paint: { 'fill-color': '#FF6B35', 'fill-opacity': 0.15 }
+    });
+
+    map.addLayer({
+      id: 'regions-stroke',
+      type: 'line',
+      source: 'regions',
+      paint: { 'line-color': '#FF6B35', 'line-width': 2 }
+    });
+
     const venuesRes = await fetch('venues.geojson');
     const venuesData = await venuesRes.json();
 

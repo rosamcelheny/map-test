@@ -2,18 +2,9 @@ import { readFileSync, writeFileSync } from 'fs';
 import * as turf from '@turf/turf';
 
 const config = JSON.parse(readFileSync('regions-config.json', 'utf8'));
-
-console.log('Fetching boundary data...');
-
-const [sfNeighborhoods, caCounties, caPlaces] = await Promise.all([
-  fetch('https://data.sfgov.org/resource/p5b7-5n3h.geojson').then(r => r.json()),
-  fetch('https://www2.census.gov/geo/tiger/GENZ2022/json/cb_2022_06_county_500k.json').then(r => r.json()),
-  fetch('https://www2.census.gov/geo/tiger/GENZ2021/json/cb_2021_06_place_500k.json').then(r => r.json()),
-]);
-
-console.log(`  SF neighborhoods: ${sfNeighborhoods.features.length}`);
-console.log(`  CA counties: ${caCounties.features.length}`);
-console.log(`  CA places: ${caPlaces.features.length}`);
+const sfNeighborhoods = JSON.parse(readFileSync('Analysis_Neighborhoods_20260429.geojson', 'utf8'));
+const caCounties = JSON.parse(readFileSync('counties.geojson', 'utf8'));
+const caPlaces = JSON.parse(readFileSync('places.geojson', 'utf8'));
 
 function unionFeatures(features, regionName) {
   if (features.length === 0) return null;
