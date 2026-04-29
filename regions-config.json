@@ -46,6 +46,11 @@
       "fips": ["06081"]
     },
     {
+      "name": "San Francisco",
+      "type": "counties",
+      "fips": ["06075"]
+    },
+    {
       "name": "Davis, Sacramento",
       "type": "cities",
       "components": ["Davis", "Sacramento"]
@@ -53,12 +58,12 @@
     {
       "name": "Berkeley, Richmond",
       "type": "cities",
-      "components": ["Berkeley", "Richmond"]
+      "components": ["Berkeley", "Richmond", "Albany", "San Pablo", "North Richmond", "El Cerrito", "Albany"]
     },
     {
       "name": "Oakland",
       "type": "cities",
-      "components": ["Oakland"]
+      "components": ["Oakland", "Emeryville"]
     }
   ]
 }
