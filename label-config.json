@@ -1,0 +1,14 @@
+{
+  "road-label-simple":             { "minzoom": 12 },
+  "waterway-label":                { "minzoom": 13 },
+  "natural-line-label":            { "minzoom": 9 },
+  "natural-point-label":           { "minzoom": 9 },
+  "water-line-label":              { "minzoom": 9 },
+  "water-point-label":             { "minzoom": 9 },
+  "poi-label":                     { "minzoom": 10 },
+  "airport-label":                 { "minzoom": 10 },
+  "settlement-subdivision-label":  { "minzoom": 10, "maxzoom": 15 },
+  "settlement-minor-label":        { "minzoom": 9,  "maxzoom": 13 },
+  "settlement-major-label":        { "minzoom": 9,  "maxzoom": 15 },
+  "state-label":                   { "minzoom": 9,  "maxzoom": 9 }
+}

@@ -184,6 +184,11 @@ async function init() {
       map.setLayoutProperty(id, 'visibility', 'none');
     });
 
+    const labelConfig = await fetch('label-config.json').then(r => r.json());
+    Object.entries(labelConfig).forEach(([id, { minzoom, maxzoom }]) => {
+      if (map.getLayer(id)) map.setLayerZoomRange(id, minzoom ?? 0, maxzoom ?? 24);
+    });
+
     applyLandColor('#916D00');
     applyLabelStyle({ color: '#333333', halo: 'rgba(255,255,255,0.3)' });
     map.getStyle().layers.forEach(l => {
