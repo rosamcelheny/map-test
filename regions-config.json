@@ -3,31 +3,37 @@
     {
       "name": "Castro, Mission",
       "type": "sf-neighborhoods",
+      "minzoom": 12,
       "components": ["Castro/Upper Market", "Mission"]
     },
     {
       "name": "Civic Center, NoPa, SOMA, Tenderloin",
       "type": "sf-neighborhoods",
+      "minzoom": 12,
       "components": ["Western Addition", "South of Market", "Tenderloin"]
     },
     {
       "name": "Chinatown, Downtown, Embarcadero",
       "type": "sf-neighborhoods",
+      "minzoom": 12,
       "components": ["Chinatown", "Financial District/South Beach", "North Beach"]
     },
     {
       "name": "Dogpatch, Potrero Hill",
       "type": "sf-neighborhoods",
+      "minzoom": 12,
       "components": ["Potrero Hill"]
     },
     {
       "name": "Fort Mason, Golden Gate Park, Nob Hill",
       "type": "sf-neighborhoods",
+      "minzoom": 12,
       "components": ["Marina", "Golden Gate Park", "Nob Hill"]
     },
     {
       "name": "Parkmerced",
       "type": "sf-neighborhoods",
+      "minzoom": 12,
       "components": ["Lakeshore"]
     },
     {

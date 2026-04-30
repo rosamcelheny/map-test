@@ -56,7 +56,7 @@ for (const region of config.regions) {
 
   const unioned = unionFeatures(matched, region.name);
   if (unioned) {
-    unioned.properties = { name: region.name };
+    unioned.properties = { name: region.name, minzoom: region.minzoom ?? 0 };
     outputFeatures.push(unioned);
     console.log(`  ✓ ${region.name} (${matched.length} component${matched.length > 1 ? 's' : ''})`);
   }

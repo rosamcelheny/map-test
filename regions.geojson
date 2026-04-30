@@ -4,7 +4,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Castro, Mission"
+        "name": "Castro, Mission",
+        "minzoom": 12
       },
       "geometry": {
         "type": "Polygon",
@@ -1321,7 +1322,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Civic Center, NoPa, SOMA, Tenderloin"
+        "name": "Civic Center, NoPa, SOMA, Tenderloin",
+        "minzoom": 12
       },
       "geometry": {
         "type": "Polygon",
@@ -2130,7 +2132,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Chinatown, Downtown, Embarcadero"
+        "name": "Chinatown, Downtown, Embarcadero",
+        "minzoom": 12
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -32822,13 +32825,15 @@
         ]
       },
       "properties": {
-        "name": "Dogpatch, Potrero Hill"
+        "name": "Dogpatch, Potrero Hill",
+        "minzoom": 12
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Fort Mason, Golden Gate Park, Nob Hill"
+        "name": "Fort Mason, Golden Gate Park, Nob Hill",
+        "minzoom": 12
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -53400,13 +53405,15 @@
         ]
       },
       "properties": {
-        "name": "Parkmerced"
+        "name": "Parkmerced",
+        "minzoom": 12
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Marin, Napa, Sonoma"
+        "name": "Marin, Napa, Sonoma",
+        "minzoom": 0
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -58249,7 +58256,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "San Jose, Santa Clara, Santa Cruz"
+        "name": "San Jose, Santa Clara, Santa Cruz",
+        "minzoom": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -63085,7 +63093,8 @@
         ]
       },
       "properties": {
-        "name": "Peninsula"
+        "name": "Peninsula",
+        "minzoom": 0
       }
     },
     {
@@ -63792,13 +63801,15 @@
         ]
       },
       "properties": {
-        "name": "San Francisco"
+        "name": "San Francisco",
+        "minzoom": 0
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Davis, Sacramento"
+        "name": "Davis, Sacramento",
+        "minzoom": 0
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -65723,7 +65734,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Berkeley, Richmond"
+        "name": "Berkeley, Richmond",
+        "minzoom": 0
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -67672,7 +67684,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Oakland"
+        "name": "Oakland",
+        "minzoom": 0
       },
       "geometry": {
         "type": "Polygon",

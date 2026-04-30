@@ -61,7 +61,7 @@
     <label>Water pattern</label>
     <input type="file" id="upload-water-pattern" accept="image/png,image/jpeg" />
     <label>Pattern scale</label>
-    <input type="number" id="pixel-ratio" value="125" min="1" step="1" />
+    <input type="number" id="pixel-ratio" value="200" min="1" step="1" />
     <label style="display:flex; align-items:center; gap:6px; cursor:pointer;">
       <input type="checkbox" id="toggle-roads" checked /> Show roads
     </label>
@@ -77,6 +77,8 @@
     <input type="text" id="hex-label" value="#B89D4F" maxlength="7" />
     <label>Label halo</label>
     <input type="text" id="hex-label-halo" value="rgba(0,0,0,0.3)" maxlength="30" />
+    <label>Region stroke</label>
+    <input type="text" id="hex-region-stroke" value="#000000" maxlength="7" />
   </div>
 </div>
 
@@ -125,7 +127,7 @@ async function init() {
       map.loadImage('Pattern_water.png', (err, img) => {
         if (err) { reject(err); return; }
         waterImg = img;
-        map.addImage('pattern-water', img, { pixelRatio: 125 });
+        map.addImage('pattern-water', img, { pixelRatio: 200 });
 
         const styleLayers = map.getStyle().layers;
         const waterIndex = styleLayers.findIndex(l => l.id === 'water');
@@ -148,7 +150,7 @@ async function init() {
       map.loadImage('Pattern_land.png', (err, img) => {
         if (err) { reject(err); return; }
         landImg = img;
-        map.addImage('pattern-land', img, { pixelRatio: 125 });
+        map.addImage('pattern-land', img, { pixelRatio: 200 });
 
         map.addSource('country-boundaries', {
           type: 'vector',
@@ -201,30 +203,29 @@ async function init() {
     map.getStyle().layers.forEach(l => {
       if (l.type === 'line') {
         try { map.setPaintProperty(l.id, 'line-color', '#614900'); } catch(e) {}
-        if (l.id !== 'county-boundaries' && l.id !== 'regions-stroke') {
+        if (l.id === 'road-simple') {
+          try { map.setLayerZoomRange(l.id, 10, l.maxzoom ?? 24); } catch(e) {}
+        } else if (l.id !== 'county-boundaries' && l.id !== 'regions-stroke') {
           try { map.setLayerZoomRange(l.id, 12, l.maxzoom ?? 24); } catch(e) {}
         }
       }
     });
 
-    const regionsRes = await fetch('regions.geojson');
-    const regionsData = await regionsRes.json();
+    const regionsData = await fetch('regions.geojson').then(r => r.json());
 
     map.addSource('regions', { type: 'geojson', data: regionsData });
 
-    map.addLayer({
-      id: 'regions-fill',
-      type: 'fill',
-      source: 'regions',
-      paint: { 'fill-color': '#FF6B35', 'fill-opacity': 0.05 }
-    });
+    const zoomFilter = ['>=', ['zoom'], ['get', 'minzoom']];
+
 
     map.addLayer({
       id: 'regions-stroke',
       type: 'line',
       source: 'regions',
-      paint: { 'line-color': '#FF6B35', 'line-width': 1 }
+      filter: zoomFilter,
+      paint: { 'line-color': '#000000', 'line-width': 1 }
     });
+
 
     const venuesRes = await fetch('venues.geojson');
     const venuesData = await venuesRes.json();
@@ -430,6 +431,11 @@ document.getElementById('hex-label-halo').addEventListener('input', e => {
   const isHex = /^#[0-9a-fA-F]{6}$/.test(val);
   const isRgba = /^rgba\(\s*\d{1,3}\s*,\s*\d{1,3}\s*,\s*\d{1,3}\s*,\s*(0|1|0?\.\d+)\s*\)$/.test(val);
   if (isHex || isRgba) applyLabelStyle({ halo: val });
+});
+
+document.getElementById('hex-region-stroke').addEventListener('input', e => {
+  const hex = e.target.value.trim();
+  if (/^#[0-9a-fA-F]{6}$/.test(hex)) map.setPaintProperty('regions-stroke', 'line-color', hex);
 });
 
 init();
