@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "name": "Castro, Mission",
-        "minzoom": 12
+        "minzoom": 10
       },
       "geometry": {
         "type": "Polygon",
@@ -1323,7 +1323,7 @@
       "type": "Feature",
       "properties": {
         "name": "Civic Center, NoPa, SOMA, Tenderloin",
-        "minzoom": 12
+        "minzoom": 10
       },
       "geometry": {
         "type": "Polygon",
@@ -2133,7 +2133,7 @@
       "type": "Feature",
       "properties": {
         "name": "Chinatown, Downtown, Embarcadero",
-        "minzoom": 12
+        "minzoom": 10
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -32826,14 +32826,14 @@
       },
       "properties": {
         "name": "Dogpatch, Potrero Hill",
-        "minzoom": 12
+        "minzoom": 10
       }
     },
     {
       "type": "Feature",
       "properties": {
         "name": "Fort Mason, Golden Gate Park, Nob Hill",
-        "minzoom": 12
+        "minzoom": 10
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -53406,7 +53406,7 @@
       },
       "properties": {
         "name": "Parkmerced",
-        "minzoom": 12
+        "minzoom": 10
       }
     },
     {
